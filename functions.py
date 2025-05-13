@@ -247,25 +247,51 @@
 
 
 #===============================|| Fizzbuzz Alogarithm ||===============================================================
+#
+# Number = float(input("Enter Your Number: "))
+# def fizz_buzz():
+#
+#     if (Number % 3 == 0) and (Number % 5 == 0):
+#         return "Fizz Buzz"
+#
+#     if Number % 3 == 0:
+#         return "Fizz"
+#
+#     if Number % 5 == 0:
+#         return "buzz"
+#
+#     else:
+#         return "Invalid"
+#
+#
+# buzz = fizz_buzz()
+# print(buzz)
 
-Number = float(input("Enter Your Number: "))
-def fizz_buzz():
+weight_in_kg = float(input("Enter your weight (kg): "))
+height_in_m = float(input("Enter your height (m): "))
 
-    if (Number % 3 == 0) and (Number % 5 == 0):
-        return "Fizz Buzz"
+def calculate_BMI(weight, height):
+    BMI = weight / height ** 2
+    return BMI
 
-    if Number % 3 == 0:
-        return "Fizz"
-
-    if Number % 5 == 0:
-        return "buzz"
-
+def interprete_BMI(BMI):
+    if BMI < 18.5:
+        return "Underweight"
+    elif 18.5 <= BMI < 25:
+        return "Normal weight"
+    elif 25 <= BMI < 30:
+        return "Overweight"
+    elif BMI >= 30:
+        return "Obese"
     else:
-        return "Invalid"
+        return "Invalid input"
 
+bmi = calculate_BMI(weight_in_kg, height_in_m)
+category = interprete_BMI(bmi)
 
-buzz = fizz_buzz()
-print(buzz)
+print(f"Your BMI is {bmi:.2f}")
+print(f"You are {category}")
+
 
 
 
