@@ -3,7 +3,7 @@
 # x = dict["Model"]
 # print(x)
 # =======================================================================================================================
-birthdays = {"Daisy" : "24 Feb", "Simon": "24th June", "Dorcas": "24th August"}
+birthdays = {"Pharrel" : "23 Jan", "Nicole": "28th July", "Susan": "24th November"}
 input("Enter your name: ")
 input("Enter you birthday")
 
